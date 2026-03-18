@@ -1,59 +1,51 @@
 "use client";
 
-import * as React from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import {
     NavigationMenu,
     NavigationMenuContent,
     NavigationMenuItem,
-    NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-    navigationMenuTriggerStyle
 } from "@/components/ui/navigation-menu";
+import { Menu } from "lucide-react";
 
 import ProfilePhoto from "@/app/components/ProfilePhoto";
 import NavBarLink from "@/app/components/NavBarLink";
 import ThemeToggleButton from "@/app/components/ThemeToggleButton";
-import { Menu } from "lucide-react";
+import { useActiveSection } from "@/hooks/useActiveSection";
+import NavBarListItem from "./NavBarListItem";
 
 export default function NavBar() {
-    const pathname = usePathname()
-    console.log(usePathname().split("/"))
-
     const endpoints_array = [
         {
-            href: "/",
+            section_id: "home",
             name: "Home"
         },
         {
-            href: "/projects",
+            section_id: "body",
+            name: "Body"
+        },
+        {
+            section_id: "projects",
             name: "Projects"
         },
         {
-            href: "/contact",
+            section_id: "contact",
             name: "Contact"
         }
     ]
 
+    const activeSection = useActiveSection(endpoints_array.map(endpoint => endpoint.section_id));
+
     function renderEndpoint() {
-        return endpoints_array.map((endpoint) => (
-            pathname === endpoint.href ?
-                null
-                : <>
-                    <NavBarLink text={endpoint.name} href={endpoint.href} />
-                </>
+        return endpoints_array.map((endpoint, index) => (
+            <NavBarLink key={index} text={endpoint.name} href={`#${endpoint.section_id}`} active={activeSection === endpoint.section_id} />
         ));
     }
 
     function renderCompressedEndpoint() {
-        return endpoints_array.map((endpoint) => (
-            pathname === endpoint.href ?
-                null
-                : <>
-                    <ListItem href={endpoint.href} title={endpoint.name} />
-                </>
+        return endpoints_array.map((endpoint, index) => (
+            <NavBarListItem key={index} title={endpoint.name} href={`#${endpoint.section_id}`} active={activeSection === endpoint.section_id} />
         ));
     }
 
@@ -97,25 +89,5 @@ export default function NavBar() {
                 </div>
             </div>
         </>
-    )
-}
-
-function ListItem({
-    title,
-    children,
-    href,
-    ...props
-}: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
-    return (
-        <li {...props}>
-            <NavigationMenuLink asChild>
-                <Link href={href}>
-                    <div className="flex flex-col gap-1 text-sm">
-                        <div className="leading-none font-medium">{title}</div>
-                        <div className="line-clamp-2 text-muted-foreground">{children}</div>
-                    </div>
-                </Link>
-            </NavigationMenuLink>
-        </li>
     )
 }
