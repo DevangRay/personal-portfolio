@@ -9,11 +9,11 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Menu } from "lucide-react";
 
-import ProfilePhoto from "@/app/components/ProfilePhoto";
-import NavBarLink from "@/app/components/NavBarLink";
-import ThemeToggleButton from "@/app/components/ThemeToggleButton";
+import ProfilePhoto from "@/app/components/navbar/ProfilePhoto";
+import NavBarLink from "@/app/components/navbar/NavBarLink";
+import ThemeToggleButton from "@/app/components/navbar/ThemeToggleButton";
 import { useActiveSection } from "@/hooks/useActiveSection";
-import NavBarListItem from "./NavBarListItem";
+import NavBarListItem from "@/app/components/navbar/NavBarListItem";
 
 export default function NavBar() {
     const endpoints_array = [
