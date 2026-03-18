@@ -59,36 +59,41 @@ export default function NavBar() {
 
     return (
         <>
-            <div className="sticky top-0 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-50 w-full mx-auto flex flex-row justify-between items-center py-5 px-20">
-                <div>
-                    <ProfilePhoto />
-                </div>
-                <div className="hidden md:flex min-h-[100%] flex-row gap-4 items-center">
-                    {renderEndpoint()}
+            <div className="sticky top-0 z-50 w-full">
+                {/* Gradient that goes from opaque at top to transparent at bottom */}
+                <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-transparent pointer-events-none" />
 
-                    <ThemeToggleButton />
-                </div>
-                <div className="flex md:hidden min-h-[100%] flex flex-row gap-4 items-center">
-                    <NavigationMenu>
-                        <NavigationMenuList>
-                            <NavigationMenuItem>
-                                <NavigationMenuTrigger>
-                                    <Menu />
-                                </NavigationMenuTrigger>
+                <div className="relative w-full mx-auto flex flex-row justify-between items-center py-10 px-40">
+                    <div>
+                        <ProfilePhoto />
+                    </div>
+                    <div className="hidden md:flex min-h-[100%] flex-row gap-4 items-center">
+                        {renderEndpoint()}
 
-                                <NavigationMenuContent>
-                                    <ul className="flex flex-col justify-center items-center">
-                                        {renderCompressedEndpoint()}
-                                        <div className="flex flex-col gap-1 text-sm">
-                                            <div className="leading-none font-medium">
-                                                <ThemeToggleButton />
+                        <ThemeToggleButton />
+                    </div>
+                    <div className="flex md:hidden min-h-[100%] flex flex-row gap-4 items-center">
+                        <NavigationMenu>
+                            <NavigationMenuList>
+                                <NavigationMenuItem>
+                                    <NavigationMenuTrigger>
+                                        <Menu />
+                                    </NavigationMenuTrigger>
+
+                                    <NavigationMenuContent>
+                                        <ul className="flex flex-col justify-center items-center">
+                                            {renderCompressedEndpoint()}
+                                            <div className="flex flex-col gap-1 text-sm">
+                                                <div className="leading-none font-medium">
+                                                    <ThemeToggleButton />
+                                                </div>
                                             </div>
-                                        </div>
-                                    </ul>
-                                </NavigationMenuContent>
-                            </NavigationMenuItem>
-                        </NavigationMenuList>
-                    </NavigationMenu>
+                                        </ul>
+                                    </NavigationMenuContent>
+                                </NavigationMenuItem>
+                            </NavigationMenuList>
+                        </NavigationMenu>
+                    </div>
                 </div>
             </div>
         </>
