@@ -8,7 +8,7 @@ export default function ProfilePhoto() {
         alt="Devang Ray"
         fill
         className="object-cover object-top"
-        // sizes="192px"
+        sizes="192px"
         priority
       />
     </div>

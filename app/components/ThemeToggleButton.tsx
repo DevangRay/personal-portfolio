@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Moon, Sun } from "lucide-react"
 import { useEffect, useState } from "react"
 
-export function ThemeToggleButton({ className }: { className?: string }) {
+export default function ThemeToggleButton({ className }: { className?: string }) {
     const { theme, resolvedTheme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
