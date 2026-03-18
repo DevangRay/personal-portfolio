@@ -1,9 +1,14 @@
-export default function NavBarLink({text}: {text: string}) {
+import Link from "next/link"
+
+export default function NavBarLink({ text, href }: { text: string, href: string }) {
     return (
         <>
-            <span className="hover:text-red-500">
+            <Link
+                href={href}
+                className="hover:text-red-500"
+            >
                 {text}
-            </span>
+            </Link>
         </>
     )
 }
