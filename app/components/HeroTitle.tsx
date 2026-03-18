@@ -1,6 +1,6 @@
 export default function HeroTitle() {
     return (
-        <div className="flex flex-col gap-4 sm:gap-6">
+        <div className="flex flex-col gap-6 sm:gap-8">
             <h1 className="text-6xl sm:text-8xl font-bold">
                 Devang Ray
             </h1>
