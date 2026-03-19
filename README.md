@@ -1,3 +1,6 @@
+# To Do:
+To run Resume parsing, run command `npm run parse-resume`
+---
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
