@@ -1,0 +1,90 @@
+{
+  "name": "Devang Ray",
+  "tagline": "Software engineer specializing in full-stack development, microservices architecture, and customer-facing applications with experience at Swift and CargoLabs.",
+  "contact": {
+    "email": "devangray624@gmail.com",
+    "location": "Centreville, VA",
+    "linkedin": "linkedin.com/in/DevangRay",
+    "github": "github.com/DevangRay",
+    "website": "devangray.dev"
+  },
+  "experience": [
+    {
+      "role": "Software Engineer",
+      "company": "Swift",
+      "startDate": "Jul 2025",
+      "endDate": "Present",
+      "bullets": [
+        "Spearheaded the development and deployment of a customer-facing help website, reducing customer support calls by 14%.",
+        "Designed a component-based architecture that facilitated modular code and reduced maintenance time by 34%.",
+        "Developed a secure backend service as a RESTful API to provide business logic and content to the website."
+      ],
+      "tags": ["React", "RESTful API", "component architecture", "customer support", "backend development"]
+    },
+    {
+      "role": "Software Engineer",
+      "company": "CargoLabs",
+      "startDate": "Jan 2025",
+      "endDate": "Jun 2025",
+      "bullets": [
+        "Led the release of an entirely new customer portal that centralized business-critical functions to enhance client efficiency and operations transparency, benefitting over 1200 active users.",
+        "Developed and deployed over 12 new services within a fully microservices-based architecture, expanding the company's marketplace functionality and increasing growth by 7%.",
+        "Upgraded the company's back-end code to securely handle high-risk credentials, eliminating potential vulnerabilities and streamlining the company's key-rotation procedures."
+      ],
+      "tags": ["microservices", "customer portal", "security", "marketplace", "backend"]
+    },
+    {
+      "role": "Software Engineering Intern",
+      "company": "Swift",
+      "startDate": "Jun 2024",
+      "endDate": "Aug 2024",
+      "bullets": [
+        "Transformed a 13-year-old legacy knowledge portal into a modern and responsive web application with improved UX and navigation, reducing customer support requests by 12.3%.",
+        "Designed and implemented a keyword search feature for improved document navigation, improving user search times from 10 minutes to 1.5 minutes on average."
+      ],
+      "tags": ["legacy modernization", "UX design", "search functionality", "web application", "responsive design"]
+    },
+    {
+      "role": "Software Engineering Intern",
+      "company": "Swift",
+      "startDate": "Jun 2023",
+      "endDate": "Aug 2023",
+      "bullets": [
+        "Provided data analysis and visualization of the performance of the company's most critical product, to proactively identify potential system errors, reducing propagated failures by 2.6%."
+      ],
+      "tags": ["data analysis", "visualization", "system monitoring", "error prevention"]
+    },
+    {
+      "role": "Senior Teaching Assistant",
+      "company": "University of Virginia Computer Science Department",
+      "startDate": "Aug 2022",
+      "endDate": "Dec 2024",
+      "bullets": [
+        "Tutored 30+ undergraduate students, teaching best practices with Git, navigating Linux/UNIX systems, and debugging Assembly, C, and full-stack Java coding projects.",
+        "Graded over 800 assignments and assisted in writing comprehensive exam questions covering Computer Architecture, x86-64 Assembly, both C and Java coding languages, and Software Design Patterns."
+      ],
+      "tags": ["teaching", "Git", "Linux", "Assembly", "Java"]
+    },
+    {
+      "role": "Software Engineering Intern",
+      "company": "EMS LINQ, Inc.",
+      "startDate": "Jun 2022",
+      "endDate": "Aug 2022",
+      "bullets": [
+        "Upgraded 10% of backend endpoints used by the company's primary product, strengthening the protection of their customers' confidential educational data.",
+        "Contributed to a 12.5% increase in average weekly productivity for the team."
+      ],
+      "tags": ["backend endpoints", "data security", "productivity", "educational data"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "institution": "University of Virginia School of Engineering & Applied Science",
+      "startDate": "Aug 2021",
+      "endDate": "Dec 2024"
+    }
+  ],
+  "skills": ["Java", "Python", "JavaScript", "TypeScript", "Dart", "C", "C#", "AWS ECS", "AWS Lambda", "AWS Cognito", "AWS Secrets Manager", "PostgreSQL", "MySQL", "SQLite", "MongoDB", "Firebase", "Django", "Flask", "Next.js", "React", "Docker", "Spring", "Spring Boot"],
+  "lastUpdated": "2024-12-28"
+}
