@@ -5,7 +5,7 @@ import * as fs from "fs";
 import * as path from "path"
 import { extractText, getDocumentProxy } from 'unpdf';
 import { fileURLToPath } from "node:url";
-import { ExtractText, ClaudeOutput } from "../types/claude-types";
+import { ExtractText } from "../types/claude-types";
 
 const output_file_name = "resume_highlights.json"
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -21,7 +21,11 @@ async function extractPDFText(): Promise<ExtractText> {
     return { totalPages, text };
 }
 
-async function extractDetailsFromPDF(pdf_text: string): Promise<ClaudeOutput> {
+async function extractDetailsFromPDF(pdf_text: string): Promise<Anthropic.Message> {
+    // TEST SECTION ================================================================
+    // return returnTestClaudeOutput();
+    // END OF TESTING SECTION ======================================================
+
     const llm_prompt = `You are a resume parser. Extract structured JSON data from the resume text below.
 
 Return ONLY a valid JSON object with this exact shape — no markdown, no explanation, no backticks:
@@ -67,17 +71,20 @@ Rules:
 Resume text: [${pdf_text}]`
     const client = new Anthropic();
 
-    // const claude_message = await client.messages.create({
-    //     model: "claude-sonnet-4-20250514",
-    //     max_tokens: 2048,
-    //     messages: [
-    //         {
-    //             role: "user",
-    //             content: llm_prompt
-    //         }
-    //     ]
-    // });
-    // return claude_message;
+    const claude_message = await client.messages.create({
+        model: "claude-sonnet-4-20250514",
+        max_tokens: 2048,
+        messages: [
+            {
+                role: "user",
+                content: llm_prompt
+            }
+        ]
+    });
+    return claude_message;
+}
+
+function returnTestClaudeOutput(): Anthropic.Message {
     const test_claude_message = {
         model: 'claude-sonnet-4-20250514',
         id: 'msg_019C5LyRdGqGRrNqPCGyJX1u',
@@ -189,13 +196,18 @@ Resume text: [${pdf_text}]`
             service_tier: 'standard',
             inference_geo: 'not_available'
         }
-    };
+    } as Anthropic.Message;
     return test_claude_message;
 }
 
-function parseClaudeOutput(claude_output: ClaudeOutput): void {
-    const resume_highlights = claude_output.content[0].text;
-    fs.writeFileSync(OUTPUT_PATH, resume_highlights);
+function parseClaudeOutput(claude_output: Anthropic.Message): void {
+    const block = claude_output.content[0];
+
+    if (block.type !== "text") {
+        throw new Error("Unexpected content type");
+    }
+
+    fs.writeFileSync(OUTPUT_PATH, block.text);
 }
 
 async function main(): Promise<void> {
