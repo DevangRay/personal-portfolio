@@ -8,7 +8,7 @@ export default function HeroTitle() {
                 Full Stack Developer
             </h2>
             <h3 className="text-2xl sm:text-4xl">
-                Developer based around Washington DC, USA.
+                Developer based in Washington DC.
             </h3>
         </div>
     )
