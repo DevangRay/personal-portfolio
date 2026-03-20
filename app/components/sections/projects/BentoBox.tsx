@@ -8,18 +8,19 @@ const featured = data.find((datum) => datum.featured);
 const others = data.filter((datum) => !datum.featured);
 export default function BentoBox() {
     return (
-        <div className="w-full h-full grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4">
             {
                 featured && (
-                    <FeaturedCard project={featured} />
+                    <div className="md:col-span-2">
+                        <FeaturedCard project={featured} />
+                    </div>
                 )
             }
-            <div className="grid grid-cols-1 gap-4">
+            <div className="grid grid-cols-1 gap-4 h-full">
                 {
                     others.map((project, index) => (
                         <SmallCard key={index} project={project} />
                     ))
-
                 }
             </div>
         </div>

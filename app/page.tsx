@@ -19,11 +19,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="experiences" className="scroll-mt-30">
+        <section id="experiences" className="w-full scroll-mt-30">
           <ExperienceSection />
         </section>
 
-        <section id="projects" className="scroll-mt-30">
+        <section id="projects" className="w-full scroll-mt-30">
           <ProjectsSection />
         </section>
 
