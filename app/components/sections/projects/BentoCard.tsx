@@ -6,22 +6,56 @@ import Link from "next/link";
 import { ProjectData } from "@/types/project-types";
 
 const BLOB_COLOR_PAIRS = [
+    // 1) red to blue
     {
-        a: "bg-[radial-gradient(ellipse_at_top_left,_oklch(0.7_0.15_280)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_top_left,_oklch(0.4_0.15_280)_0%,_transparent_60%)]",
+        a: "bg-[radial-gradient(ellipse_at_top_left,_oklch(0.7_0.2_15)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_top_left,_oklch(0.45_0.2_15)_0%,_transparent_60%)]",
         b: "bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.75_0.12_220)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.35_0.12_220)_0%,_transparent_60%)]",
     },
+    // 2) orange to purple
+    {
+        a: "bg-[radial-gradient(ellipse_at_top_left,_oklch(0.75_0.18_50)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_top_left,_oklch(0.45_0.18_50)_0%,_transparent_60%)]",
+        b: "bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.7_0.15_280)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.4_0.15_280)_0%,_transparent_60%)]",
+    },
+    // 3) pink to teal
+    {
+        a: "bg-[radial-gradient(ellipse_at_top_left,_oklch(0.75_0.18_340)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_top_left,_oklch(0.45_0.18_340)_0%,_transparent_60%)]",
+        b: "bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.75_0.15_185)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.45_0.15_185)_0%,_transparent_60%)]",
+    },
+    // 4) green to yellow
     {
         a: "bg-[radial-gradient(ellipse_at_top_left,_oklch(0.75_0.15_160)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_top_left,_oklch(0.45_0.15_160)_0%,_transparent_60%)]",
-        b: "bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.7_0.12_200)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.35_0.12_200)_0%,_transparent_60%)]",
+        b: "bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.8_0.17_100)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.5_0.17_100)_0%,_transparent_60%)]",
     },
+    // 5) yellow to green
     {
-        a: "bg-[radial-gradient(ellipse_at_top_left,_oklch(0.75_0.15_30)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_top_left,_oklch(0.45_0.15_30)_0%,_transparent_60%)]",
-        b: "bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.7_0.12_60)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.35_0.12_60)_0%,_transparent_60%)]",
+        a: "bg-[radial-gradient(ellipse_at_top_left,_oklch(0.8_0.17_100)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_top_left,_oklch(0.5_0.17_100)_0%,_transparent_60%)]",
+        b: "bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.75_0.15_160)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.45_0.15_160)_0%,_transparent_60%)]",
     },
+    // 6) blue to orange
     {
-        a: "bg-[radial-gradient(ellipse_at_top_left,_oklch(0.75_0.15_320)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_top_left,_oklch(0.45_0.15_320)_0%,_transparent_60%)]",
-        b: "bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.7_0.12_260)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.35_0.12_260)_0%,_transparent_60%)]",
-    }
+        a: "bg-[radial-gradient(ellipse_at_top_left,_oklch(0.75_0.12_220)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_top_left,_oklch(0.35_0.12_220)_0%,_transparent_60%)]",
+        b: "bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.75_0.18_50)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.45_0.18_50)_0%,_transparent_60%)]",
+    },
+    // 7) teal to pink
+    {
+        a: "bg-[radial-gradient(ellipse_at_top_left,_oklch(0.75_0.15_185)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_top_left,_oklch(0.45_0.15_185)_0%,_transparent_60%)]",
+        b: "bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.75_0.18_340)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.45_0.18_340)_0%,_transparent_60%)]",
+    },
+    // 8) purple to red
+    {
+        a: "bg-[radial-gradient(ellipse_at_top_left,_oklch(0.7_0.15_280)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_top_left,_oklch(0.4_0.15_280)_0%,_transparent_60%)]",
+        b: "bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.7_0.2_15)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.45_0.2_15)_0%,_transparent_60%)]",
+    },
+    // 9) coral to indigo
+    {
+        a: "bg-[radial-gradient(ellipse_at_top_left,_oklch(0.75_0.18_25)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_top_left,_oklch(0.45_0.18_25)_0%,_transparent_60%)]",
+        b: "bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.7_0.18_255)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.4_0.18_255)_0%,_transparent_60%)]",
+    },
+    // 10) indigo to coral
+    {
+        a: "bg-[radial-gradient(ellipse_at_top_left,_oklch(0.7_0.18_255)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_top_left,_oklch(0.4_0.18_255)_0%,_transparent_60%)]",
+        b: "bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.75_0.18_25)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.45_0.18_25)_0%,_transparent_60%)]",
+    },
 ];
 
 function pickBlobPair(id: string) {

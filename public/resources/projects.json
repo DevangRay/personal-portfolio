@@ -16,7 +16,7 @@
         "span": 4
     },
     {
-        "id": "acronym-chatbot",
+        "id": "chatbot",
         "title": "Acronym Chatbot",
         "tagline": "High-throughput REST API with rate limiting.",
         "description": "...",
@@ -32,7 +32,7 @@
         "span": 2
     },
     {
-        "id": "hoos-buying",
+        "id": "hoos-buying-site",
         "title": "HoosBuying",
         "tagline": "High-throughput REST API with rate limiting.",
         "description": "...",
@@ -48,7 +48,7 @@
         "span": 2
     },
     {
-        "id": "portfolio",
+        "id": "my-portfolio",
         "title": "Portfolio site",
         "tagline": "The site you're looking at right now.",
         "description": "Built with Next.js 16, Tailwind v4, and react-pdf...",
