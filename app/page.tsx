@@ -11,14 +11,6 @@ export default function Home() {
           <HeroTitle />
         </section>
 
-        <section id="body" className="w-full min-h-screen scroll-mt-30 bg-green-50">
-          <div>
-            <span>
-              This text goes long
-            </span>
-          </div>
-        </section>
-
         <section id="experiences" className="w-full scroll-mt-30">
           <ExperienceSection />
         </section>

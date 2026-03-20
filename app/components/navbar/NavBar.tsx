@@ -22,10 +22,6 @@ export default function NavBar() {
             name: "Home"
         },
         {
-            section_id: "body",
-            name: "Body"
-        },
-        {
             section_id: "experiences",
             name: "Experiences"
         },
