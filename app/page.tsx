@@ -19,7 +19,7 @@ export default function Home() {
           <ProjectsSection />
         </section>
 
-        <section id="contact" className="scroll-mt-30">
+        <section id="contact" className="w-full h-[50vh] scroll-mt-30">
           <ContactSection />
         </section>
       </main>
