@@ -2,7 +2,7 @@ import { ProjectData } from "@/types/project-types"
 
 export default function FeaturedCard({ project }: { project: ProjectData }) {
     return (
-        <div className="group flex flex-col justify-around w-full h-full rounded-sm p-4 transition-transform duration-200 ease-out hover:md:-translate-y-0.5 hover:md:translate-x-0.5 active:md:translate-y-0 active:-translate-y-0.5 active:translate-x-0.5 cursor-pointer bg-green-500 relative overflow-hidden">
+        <div className="group flex flex-col justify-around w-full h-full rounded-xl p-4 transition-transform duration-200 ease-out hover:md:-translate-y-0.5 hover:md:translate-x-0.5 active:md:translate-y-0 active:-translate-y-0.5 active:translate-x-0.5 cursor-pointer bg-green-500 relative overflow-hidden">
             {/* Shimmer overlay */}
             <div
                 className="absolute group-hover:animate-[shimmer-diagonal_0.6s_ease-in-out] pointer-events-none"
@@ -20,7 +20,7 @@ export default function FeaturedCard({ project }: { project: ProjectData }) {
                 {project.title}
             </h3>
             <p>
-                {project.description}
+                {project.tagline}
             </p>
         </div>
     )
