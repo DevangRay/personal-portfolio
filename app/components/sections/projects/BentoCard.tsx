@@ -5,18 +5,42 @@ import Image from "next/image";
 import Link from "next/link";
 import { ProjectData } from "@/types/project-types";
 
-export default function FeaturedCard({ project }: { project: ProjectData }) {
+const BLOB_COLOR_PAIRS = [
+    {
+        a: "bg-[radial-gradient(ellipse_at_top_left,_oklch(0.7_0.15_280)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_top_left,_oklch(0.4_0.15_280)_0%,_transparent_60%)]",
+        b: "bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.75_0.12_220)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.35_0.12_220)_0%,_transparent_60%)]",
+    },
+    {
+        a: "bg-[radial-gradient(ellipse_at_top_left,_oklch(0.75_0.15_160)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_top_left,_oklch(0.45_0.15_160)_0%,_transparent_60%)]",
+        b: "bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.7_0.12_200)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.35_0.12_200)_0%,_transparent_60%)]",
+    },
+    {
+        a: "bg-[radial-gradient(ellipse_at_top_left,_oklch(0.75_0.15_30)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_top_left,_oklch(0.45_0.15_30)_0%,_transparent_60%)]",
+        b: "bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.7_0.12_60)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.35_0.12_60)_0%,_transparent_60%)]",
+    },
+    {
+        a: "bg-[radial-gradient(ellipse_at_top_left,_oklch(0.75_0.15_320)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_top_left,_oklch(0.45_0.15_320)_0%,_transparent_60%)]",
+        b: "bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.7_0.12_260)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.35_0.12_260)_0%,_transparent_60%)]",
+    }
+];
+
+function pickBlobPair(id: string) {
+    const hash = id.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0);
+    return BLOB_COLOR_PAIRS[hash % BLOB_COLOR_PAIRS.length];
+}
+
+export default function BentoCard({ project, index, isFeature }: { project: ProjectData, index: number, isFeature: boolean }) {
     const [imgLoaded, setImgLoaded] = useState(false);
+    const blobs = pickBlobPair(project.id);
 
     return (
         <div className="group relative flex flex-col h-full overflow-hidden rounded-xl cursor-pointer transition-transform duration-200 ease-out md:hover:-translate-y-0.5 md:hover:translate-x-0.5 active:-translate-y-0.5 active:translate-x-0.5">
-
             {/* Gradient blobs */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_oklch(0.7_0.15_280)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_top_left,_oklch(0.4_0.15_280)_0%,_transparent_60%)] opacity-50 pointer-events-none" />
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.75_0.12_220)_0%,_transparent_60%)] dark:bg-[radial-gradient(ellipse_at_bottom_right,_oklch(0.35_0.12_220)_0%,_transparent_60%)] opacity-50 pointer-events-none" />
+            <div className={`absolute inset-0 ${blobs.a} opacity-50 pointer-events-none`} />
+            <div className={`absolute inset-0 ${blobs.b} opacity-50 pointer-events-none`} />
 
             {/* Glass layer */}
-            <div className="absolute inset-0 border border-white/20 bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-xl pointer-events-none" />
+            <div className="absolute inset-0 border border-black/2 bg-black/5 dark:border-white/20 dark:bg-white/5 backdrop-blur-md rounded-xl pointer-events-none" />
 
             {/* Shimmer overlay */}
             <div
@@ -77,22 +101,26 @@ export default function FeaturedCard({ project }: { project: ProjectData }) {
                 </div>
 
                 {/* Screenshot */}
-                <div className="relative mx-4 mb-4 rounded-lg overflow-hidden border border-border border-red">
-                    {!imgLoaded && (
-                        <div className="absolute inset-0 bg-muted animate-pulse" />
-                    )}
-                    {project.screenshot && (
-                        <Image
-                            src={project.screenshot}
-                            alt={`${project.title} screenshot`}
-                            width={0}
-                            height={0}
-                            sizes="(max-width: 768px) 100vw, 66vw"
-                            className={`w-full h-auto transition-opacity duration-300 ${imgLoaded ? "opacity-100" : "opacity-0"}`}
-                            onLoad={() => setImgLoaded(true)}
-                        />
-                    )}
-                </div>
+                {
+                    isFeature && (
+                        <div className="relative mx-4 mb-4 rounded-lg overflow-hidden border border-border border-red">
+                            {!imgLoaded && (
+                                <div className="absolute inset-0 bg-muted animate-pulse" />
+                            )}
+                            {project.screenshot && (
+                                <Image
+                                    src={project.screenshot}
+                                    alt={`${project.title} screenshot`}
+                                    width={0}
+                                    height={0}
+                                    sizes="(max-width: 768px) 100vw, 66vw"
+                                    className={`w-full h-auto transition-opacity duration-300 ${imgLoaded ? "opacity-100" : "opacity-0"}`}
+                                    onLoad={() => setImgLoaded(true)}
+                                />
+                            )}
+                        </div>
+                    )
+                }
             </div>
         </div>
     );

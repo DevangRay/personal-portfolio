@@ -1,6 +1,6 @@
 [
     {
-        "id": "fantasy-football",
+        "id": "fantasy-football-sentimizer",
         "title": "Fantasy Sentimizer",
         "tagline": "High-throughput REST API with rate limiting.",
         "description": "...",
@@ -32,7 +32,7 @@
         "span": 2
     },
     {
-        "id": "hoosbuying",
+        "id": "hoos-buying",
         "title": "HoosBuying",
         "tagline": "High-throughput REST API with rate limiting.",
         "description": "...",
