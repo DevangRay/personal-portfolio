@@ -13,10 +13,10 @@ export default function TimelineEntry({ entry }: { entry: ExperienceEntry }) {
                 <div className="w-px flex-1 bg-border mt-1" />
             </div>
 
-            <div className="pb-5 flex-1 min-w-0">
+            <div className="flex-1 min-w-0">
                 <button
                     onClick={() => setExpanded((prev) => !prev)}
-                    className="w-full text-left group cursor-pointer hover:bg-red-50"
+                    className="w-full text-left group cursor-pointer hover:bg-muted p-2"
                 >
                     <div className="flex items-start justify-between gap-2">
                         <div>

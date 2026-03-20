@@ -3,7 +3,6 @@ import ContactSection from "@/app/components/sections/ContactSection";
 import ProjectsSection from "@/app/components/sections/ProjectsSection";
 import ExperienceSection from "@/app/components/sections/experience/ExperienceSection";
 
-
 export default function Home() {
   return (
     <div className="min-h-screen font-sans">
