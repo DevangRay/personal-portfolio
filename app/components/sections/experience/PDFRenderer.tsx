@@ -5,7 +5,7 @@ import { useCallback, useState } from "react"
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
-import PaperSkeleton from "@/app/components/PaperSkeleton";
+import PaperSkeleton from "@/app/components/sections/experience/PaperSkeleton";
 import resumeData from "@/public/resources/resume_highlights.json";
 import { ResumeData } from "@/types/resume-types";
 import { parseDate } from "@/lib/utils";

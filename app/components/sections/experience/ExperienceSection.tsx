@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
-import PaperSkeleton from "@/app/components/PaperSkeleton";
+import PaperSkeleton from "@/app/components/sections/experience/PaperSkeleton";
 import ResumeHighlights from "@/app/components/sections/experience/ResumeHighlights";
 
 const PDFRenderer = dynamic(
