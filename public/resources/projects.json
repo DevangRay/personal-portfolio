@@ -43,5 +43,35 @@
         "liveUrl": null,
         "githubUrl": "https://github.com/you/api-service",
         "screenshot": null
+    },
+    {
+        "id": "api-service",
+        "title": "API service",
+        "tagline": "High-throughput REST API with rate limiting.",
+        "description": "...",
+        "tags": [
+            "Go",
+            "Redis",
+            "Docker"
+        ],
+        "featured": false,
+        "liveUrl": null,
+        "githubUrl": "https://github.com/you/api-service",
+        "screenshot": null
+    },
+    {
+        "id": "api-service",
+        "title": "API service",
+        "tagline": "High-throughput REST API with rate limiting.",
+        "description": "...",
+        "tags": [
+            "Go",
+            "Redis",
+            "Docker"
+        ],
+        "featured": false,
+        "liveUrl": null,
+        "githubUrl": "https://github.com/you/api-service",
+        "screenshot": null
     }
 ]
