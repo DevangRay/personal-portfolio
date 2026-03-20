@@ -18,7 +18,7 @@ export function useActiveSection(sectionIds: string[]): string {
           }
         },
         {
-          rootMargin: "-20% 0px -55% 0px", // triggers when section is in the middle ~40% of viewport
+          rootMargin: "-30% 0px -55% 0px", // triggers when section is in the middle ~40% of viewport
           threshold: 0,
         }
       );
