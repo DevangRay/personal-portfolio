@@ -6,7 +6,7 @@ export default function ProjectsSection() {
             <h2 className="text-2xl sm:text-4xl font-bold">
                 Featured Projects
             </h2>
-
+            
             <BentoBox />
         </div>
     )
