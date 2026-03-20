@@ -12,7 +12,7 @@
         "featured": true,
         "liveUrl": "https://fantasy-football-sentiment-analyzer.vercel.app/",
         "githubUrl": "https://github.com/you/api-service",
-        "screenshot": "/images/icon.jpg",
+        "screenshot": "/images/projects/sentiment-analyzer.png",
         "span": 4
     },
     {
