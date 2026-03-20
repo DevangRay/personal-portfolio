@@ -1,0 +1,47 @@
+[
+    {
+        "id": "fantasy-football",
+        "title": "Fantasy Sentimizer",
+        "tagline": "High-throughput REST API with rate limiting.",
+        "description": "...",
+        "tags": [
+            "NLP",
+            "Next.js",
+            "Python"
+        ],
+        "featured": true,
+        "liveUrl": "https://fantasy-football-sentiment-analyzer.vercel.app/",
+        "githubUrl": "https://github.com/you/api-service",
+        "screenshot": "/images/icon.jpg"
+    },
+    {
+        "id": "portfolio",
+        "title": "Portfolio site",
+        "tagline": "The site you're looking at right now.",
+        "description": "Built with Next.js 16, Tailwind v4, and react-pdf...",
+        "tags": [
+            "Next.js",
+            "Tailwind",
+            "TypeScript"
+        ],
+        "featured": false,
+        "liveUrl": null,
+        "githubUrl": "https://github.com/you/portfolio",
+        "screenshot": null
+    },
+    {
+        "id": "api-service",
+        "title": "API service",
+        "tagline": "High-throughput REST API with rate limiting.",
+        "description": "...",
+        "tags": [
+            "Go",
+            "Redis",
+            "Docker"
+        ],
+        "featured": false,
+        "liveUrl": null,
+        "githubUrl": "https://github.com/you/api-service",
+        "screenshot": null
+    }
+]
