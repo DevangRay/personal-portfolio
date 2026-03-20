@@ -26,6 +26,10 @@ export default function NavBar() {
             name: "Body"
         },
         {
+            section_id: "experiences",
+            name: "Experiences"
+        },
+        {
             section_id: "projects",
             name: "Projects"
         },

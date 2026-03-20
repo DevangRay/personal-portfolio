@@ -1,6 +1,7 @@
 import HeroTitle from "@/app/components/sections/HeroTitle";
 import ContactSection from "@/app/components/sections/ContactSection";
 import ProjectsSection from "@/app/components/sections/ProjectsSection";
+import ExperienceSection from "@/app/components/sections/experience/ExperienceSection";
 
 
 export default function Home() {
@@ -17,6 +18,10 @@ export default function Home() {
               This text goes long
             </span>
           </div>
+        </section>
+
+        <section id="experiences" className="scroll-mt-30">
+          <ExperienceSection />
         </section>
 
         <section id="projects" className="scroll-mt-30">
