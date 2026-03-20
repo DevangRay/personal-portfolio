@@ -34,18 +34,24 @@ export default function ExperienceSection() {
     }, []);
 
     return (
-        <div className="w-full flex flex-col sm:flex-row gap-4 items-start">
-            {/* Resume pdf */}
-            <div ref={pdfRef}>
-                <PDFRenderer />
-            </div>
+        <div className="flex flex-col gap-4">
+            <h2 className="text-2xl sm:text-4xl font-bold">
+                Work Experience
+            </h2>
 
-            {/* Right: Highlights */}
-            <div
-                className="flex-1 border border-border flex flex-col overflow-hidden"
-                style={{ height: pdfHeight }}
-            >
-                <ResumeHighlights />
+            <div className="w-full flex flex-col sm:flex-row gap-4 items-start">
+                {/* Resume pdf */}
+                <div ref={pdfRef}>
+                    <PDFRenderer />
+                </div>
+
+                {/* Right: Highlights */}
+                <div
+                    className="flex-1 border border-border flex flex-col overflow-hidden"
+                    style={{ height: pdfHeight }}
+                >
+                    <ResumeHighlights />
+                </div>
             </div>
         </div>
     );
