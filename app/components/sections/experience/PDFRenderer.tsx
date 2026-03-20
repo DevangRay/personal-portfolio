@@ -15,10 +15,12 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 export default function PDFRenderer() {
     const [numPages, setNumPages] = useState<number>(0);
     const [currentPage, setCurrentPage] = useState<number>(1);
+    const [isLoading, setIsLoading] = useState<boolean>(true);
 
     const onDocumentLoadSuccess = useCallback(
         ({ numPages }: { numPages: number }) => {
             setNumPages(numPages);
+            setIsLoading(false);
         }, []
     );
 
@@ -26,10 +28,12 @@ export default function PDFRenderer() {
         <div className="flex flex-col items-center gap-4">
             {/* Tray behind the paper */}
             <div className="bg-neutral-200 dark:bg-neutral-800 p-6">
+                {isLoading && <PaperSkeleton />}
+
                 <Document
                     file="/resources/Resume.pdf"
                     onLoadSuccess={onDocumentLoadSuccess}
-                    loading={<PaperSkeleton />}
+                    loading={""}
                 >
                     <Page
                         pageNumber={currentPage}

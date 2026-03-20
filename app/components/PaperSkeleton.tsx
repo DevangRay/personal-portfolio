@@ -5,7 +5,12 @@ export default function PaperSkeleton() {
             style={{ width: 460, height: 595 }}
         >
             <div className="w-full h-full relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-neutral-200/60 dark:via-neutral-300/20 to-transparent animate-[shimmer_1.6s_infinite]" />
+                <div
+                    className="absolute inset-0 animate-[shimmer_1.6s_infinite]"
+                    style={{
+                        background: "linear-gradient(90deg, transparent 0%, transparent 35%, rgba(255,255,255,0.95) 50%, transparent 65%, transparent 100%)"
+                    }}
+                />
                 <div className="p-8 flex flex-col gap-4">
                     <div className="h-4 w-1/2 rounded bg-neutral-200 dark:bg-neutral-300/30" />
                     <div className="h-3 w-3/4 rounded bg-neutral-200 dark:bg-neutral-300/30" />
