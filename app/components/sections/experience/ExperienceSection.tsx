@@ -41,14 +41,14 @@ export default function ExperienceSection() {
 
             <div className="w-full flex flex-col sm:flex-row gap-4 items-start">
                 {/* Resume pdf */}
-                <div ref={pdfRef}>
+                <div ref={pdfRef} className="hidden md:flex">
                     <PDFRenderer />
                 </div>
 
                 {/* Right: Highlights */}
                 <div
                     className="flex-1 border border-border flex flex-col overflow-hidden"
-                    style={{ height: pdfHeight }}
+                    style={{ height: pdfHeight, minHeight: 420 }}
                 >
                     <ResumeHighlights />
                 </div>
