@@ -26,20 +26,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="system"
-        enableSystem
-        disableTransitionOnChange
+
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <NavBar />
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
         >
+          <NavBar />
 
           {children}
-        </body>
-      </ThemeProvider>
+        </ThemeProvider>
+      </body>
     </html >
   );
 }
