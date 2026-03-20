@@ -7,5 +7,6 @@ export type ProjectData = {
     featured: boolean,
     liveUrl: string | null,
     githubUrl: string,
-    screenshot: string
+    screenshot: string,
+    span: number
 }

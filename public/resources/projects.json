@@ -12,7 +12,40 @@
         "featured": true,
         "liveUrl": "https://fantasy-football-sentiment-analyzer.vercel.app/",
         "githubUrl": "https://github.com/you/api-service",
-        "screenshot": "/images/icon.jpg"
+        "screenshot": "/images/icon.jpg",
+        "span": 4
+    },
+    {
+        "id": "acronym-chatbot",
+        "title": "Acronym Chatbot",
+        "tagline": "High-throughput REST API with rate limiting.",
+        "description": "...",
+        "tags": [
+            "Go",
+            "Redis",
+            "Docker"
+        ],
+        "featured": false,
+        "liveUrl": null,
+        "githubUrl": "https://github.com/you/api-service",
+        "screenshot": null,
+        "span": 2
+    },
+    {
+        "id": "hoosbuying",
+        "title": "HoosBuying",
+        "tagline": "High-throughput REST API with rate limiting.",
+        "description": "...",
+        "tags": [
+            "Go",
+            "Redis",
+            "Docker"
+        ],
+        "featured": false,
+        "liveUrl": null,
+        "githubUrl": "https://github.com/you/api-service",
+        "screenshot": null,
+        "span": 2
     },
     {
         "id": "portfolio",
@@ -27,51 +60,7 @@
         "featured": false,
         "liveUrl": null,
         "githubUrl": "https://github.com/you/portfolio",
-        "screenshot": null
-    },
-    {
-        "id": "api-service",
-        "title": "API service",
-        "tagline": "High-throughput REST API with rate limiting.",
-        "description": "...",
-        "tags": [
-            "Go",
-            "Redis",
-            "Docker"
-        ],
-        "featured": false,
-        "liveUrl": null,
-        "githubUrl": "https://github.com/you/api-service",
-        "screenshot": null
-    },
-    {
-        "id": "api-service",
-        "title": "API service",
-        "tagline": "High-throughput REST API with rate limiting.",
-        "description": "...",
-        "tags": [
-            "Go",
-            "Redis",
-            "Docker"
-        ],
-        "featured": false,
-        "liveUrl": null,
-        "githubUrl": "https://github.com/you/api-service",
-        "screenshot": null
-    },
-    {
-        "id": "api-service",
-        "title": "API service",
-        "tagline": "High-throughput REST API with rate limiting.",
-        "description": "...",
-        "tags": [
-            "Go",
-            "Redis",
-            "Docker"
-        ],
-        "featured": false,
-        "liveUrl": null,
-        "githubUrl": "https://github.com/you/api-service",
-        "screenshot": null
+        "screenshot": null,
+        "span": 6
     }
 ]
