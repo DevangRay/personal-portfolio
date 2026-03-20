@@ -19,8 +19,7 @@ export default function BentoBox() {
             {others.map((project) => (
                 <div
                     key={project.id}
-                    style={{ gridColumn: `span ${project.span}` }}
-                    className="md:[grid-column:var(--span)]"
+                    className={`col-span-1 md:col-span-${project.span}`}
                 >
                     <SmallCard project={project} />
                 </div>
