@@ -1,10 +1,10 @@
-import PhotoCard from "./PhotoCard";
-import PhotoStack from "./PhotoStack";
+import PhotoStack from "@/app/components/sections/about-me/PhotoStack";
 
 export default function AboutMeSection() {
     return (
-        <div className="flex flex-col sm:flex-row gap-4">
-            <div>
+        <div className="flex flex-col sm:flex-row gap-6">
+            {/* Texts */}
+            <div className="flex flex-col gap-4">
                 <h2 className="text-2xl sm:text-4xl font-bold">
                     About Me
                 </h2>
@@ -21,9 +21,9 @@ export default function AboutMeSection() {
                     </p>
                 </div>
             </div>
+
             <div className="min-w-1/2 flex justify-center items-center">
                 <PhotoStack />
-                {/* <PhotoCard src={"/images/icon.jpg"} /> */}
             </div>
         </div>
     )
