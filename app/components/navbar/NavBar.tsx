@@ -30,8 +30,8 @@ export default function NavBar() {
             name: "Projects"
         },
         {
-            section_id: "contact",
-            name: "Contact"
+            section_id: "about-me",
+            name: "About Me"
         }
     ]
 

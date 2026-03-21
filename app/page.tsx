@@ -1,7 +1,7 @@
 import HeroTitle from "@/app/components/sections/HeroTitle";
-import ContactSection from "@/app/components/sections/ContactSection";
 import ProjectsSection from "@/app/components/sections/projects/ProjectsSection";
 import ExperienceSection from "@/app/components/sections/experience/ExperienceSection";
+import AboutMeSection from "@/app/components/sections/about-me/AboutMeSection";
 
 export default function Home() {
   return (
@@ -19,8 +19,8 @@ export default function Home() {
           <ProjectsSection />
         </section>
 
-        <section id="contact" className="w-full h-[50vh] scroll-mt-30">
-          <ContactSection />
+        <section id="about-me" className="w-full h-[50vh] scroll-mt-30">
+          <AboutMeSection />
         </section>
       </main>
     </div>
