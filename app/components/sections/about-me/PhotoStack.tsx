@@ -16,10 +16,12 @@ const photos: Photo[] = [
 ];
 
 // Fixed rotations per stack position (index 0 = top)
-const rotations = [5, -3, 7, -1];
+const rotations = [0, 7, -3, 5];
+// const rotations = [5, -3, 7, -1];
 
 export default function PhotoStack() {
     const [order, setOrder] = useState<number[]>(photos.map((_, i) => i));
+    const [hovered, setHovered] = useState(false);
 
     const cycleTop = () => {
         setOrder((prev) => {
@@ -34,21 +36,27 @@ export default function PhotoStack() {
             style={{ perspective: "600px" }}
         >
             {[...order].reverse().map((photoIndex, stackPos) => {
-                // stackPos 0 = bottom, stackPos (order.length - 1) = top
                 const isTop = stackPos === order.length - 1;
-                const depthIndex = stackPos; // higher = closer to top
-                const rotation = rotations[order.length - 1 - stackPos]; // top gets rotations[0]
+                const depthIndex = stackPos;
+                const rotation = rotations[order.length - 1 - stackPos];
 
                 return (
                     <div
                         key={photoIndex}
                         onClick={isTop ? cycleTop : undefined}
-                        className="absolute inset-0 px-5 pt-5 pb-15 bg-white border border-solid border-gray-100 shadow-xl rounded-xs transition-all duration-500 ease-in-out"
+                        onMouseEnter={isTop ? () => setHovered(true) : undefined}
+                        onMouseLeave={isTop ? () => setHovered(false) : undefined}
+                        className="absolute inset-0 px-5 pt-5 pb-15 bg-white border border-solid border-gray-100 rounded-xs transition-all duration-300 ease-out"
                         style={{
                             rotate: `${rotation}deg`,
                             zIndex: depthIndex,
                             cursor: isTop ? "pointer" : "default",
                             transformOrigin: "center center",
+                            scale: isTop && hovered ? "1.04" : "1",
+                            translate: isTop && hovered ? "0 -6px" : "0 0",
+                            boxShadow: isTop && hovered
+                                ? "0 20px 50px rgba(0,0,0,0.22), 0 6px 16px rgba(0,0,0,0.14)"
+                                : "0 8px 30px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08)",
                         }}
                     >
                         <div className="relative w-full aspect-square overflow-hidden">
