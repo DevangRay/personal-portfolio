@@ -3,12 +3,12 @@ import PhotoStack from "./PhotoStack";
 
 export default function AboutMeSection() {
     return (
-        <div className="flex flex-col gap-4">
-            <h2 className="text-2xl sm:text-4xl font-bold">
-                About Me
-            </h2>
+        <div className="flex flex-col sm:flex-row gap-4">
+            <div>
+                <h2 className="text-2xl sm:text-4xl font-bold">
+                    About Me
+                </h2>
 
-            <div className="flex flex-col sm:flex-row gap-4">
                 <div className="flex flex-col gap-4">
                     <p>
                         Hello! I'm Devang Ray, a full-stack developer passionate about building user-friendly products that solve problems and create genuine value rather thn simply shipping solutions.
@@ -20,11 +20,10 @@ export default function AboutMeSection() {
                         Separate from Software Developmnet, I love travelling, baking, and getting outside as often as I can!
                     </p>
                 </div>
-
-                <div className="min-w-1/2 flex justify-center items-center">
-                    <PhotoStack />
-                    {/* <PhotoCard src={"/images/icon.jpg"} /> */}
-                </div>
+            </div>
+            <div className="min-w-1/2 flex justify-center items-center">
+                <PhotoStack />
+                {/* <PhotoCard src={"/images/icon.jpg"} /> */}
             </div>
         </div>
     )
