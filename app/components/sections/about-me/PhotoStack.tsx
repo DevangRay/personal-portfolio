@@ -6,18 +6,15 @@ import { useState } from "react";
 interface Photo {
     src: string;
     alt: string;
+    angle: number
 }
 
 const photos: Photo[] = [
-    { src: "/images/icon.jpg", alt: "Devang Ray" },
-    { src: "/images/hike.jpg", alt: "Tea Plantation in Kerala, India" },
-    { src: "/images/horse.jpg", alt: "Horse!" },
-    { src: "/images/rolls.jpg", alt: "Homemade Garlic Butter Rolls" },
+    { src: "/images/icon.jpg", alt: "Devang Ray", angle: 0 },
+    { src: "/images/hike.jpg", alt: "Tea Plantation in Kerala, India", angle: 4 },
+    { src: "/images/horse.jpg", alt: "Horse!", angle: -3 },
+    { src: "/images/rolls.jpg", alt: "Homemade Garlic Butter Rolls", angle: 5 },
 ];
-
-// Fixed rotations per stack position (index 0 = top)
-const rotations = [0, 7, -3, 5];
-// const rotations = [5, -3, 7, -1];
 
 export default function PhotoStack() {
     const [order, setOrder] = useState<number[]>(photos.map((_, i) => i));
@@ -38,7 +35,6 @@ export default function PhotoStack() {
             {[...order].reverse().map((photoIndex, stackPos) => {
                 const isTop = stackPos === order.length - 1;
                 const depthIndex = stackPos;
-                const rotation = rotations[order.length - 1 - stackPos];
 
                 return (
                     <div
@@ -48,7 +44,7 @@ export default function PhotoStack() {
                         onMouseLeave={isTop ? () => setHovered(false) : undefined}
                         className="absolute inset-0 px-5 pt-5 pb-15 bg-white border border-solid border-gray-100 rounded-xs transition-all duration-300 ease-out"
                         style={{
-                            rotate: `${rotation}deg`,
+                            rotate: `${photos[photoIndex].angle}deg`,
                             zIndex: depthIndex,
                             cursor: isTop ? "pointer" : "default",
                             transformOrigin: "center center",
