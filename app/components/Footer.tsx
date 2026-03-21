@@ -1,9 +1,47 @@
+import { Button } from "@/components/ui/button";
+import { ArrowUpRight } from "lucide-react";
+
+
+type SocialMediaLink = {
+    href: string,
+    name: string
+}
 export default function Footer() {
+    const links = [
+        {
+            href: "https://github.com/DevangRay",
+            name: "GitHub"
+        },
+        {
+            href: "https://www.linkedin.com/in/DevangRay",
+            name: "LinkedIn"
+        }
+    ] as SocialMediaLink[];
+
+    function renderSocialMediaLinks() {
+        return links.map((social_media) => (
+            <Button key={social_media.name} variant="link">
+                <a
+                    target="_blank"
+                    href={social_media.href}
+                    rel="noreferrer noopener"
+                    className="flex flow-row gap-2 text-muted-foreground"
+                >
+                    {social_media.name}
+                    <ArrowUpRight />
+                </a>
+            </Button>
+        ))
+    }
+
     return (
-        <footer className="w-full border-t border-border px-16 py-8 text-sm text-muted-foreground">
-            <div className="max-w-5xl mx-auto flex items-center justify-between">
+        <footer className="w-full border-t border-border px-16 py-4 text-sm text-muted-foreground">
+            <div className="max-w-5xl mx-auto flex flex-col sm:flex-row gap-6 items-center justify-between">
+                <div>
+                    {renderSocialMediaLinks()}
+                </div>
+
                 <span>© {new Date().getFullYear()} Devang Ray</span>
-                <span>Built with Next.js</span>
             </div>
         </footer>
     );
