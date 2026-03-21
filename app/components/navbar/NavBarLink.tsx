@@ -7,11 +7,10 @@ export default function NavBarLink({ text, href, active }: { text: string, href:
                 href={href}
                 className={
                     `
-                    hover:text-red-500
                     ${
                         active
-                        ? "text-blue-600 font-semibold border-b-2 border-blue-600"
-                        : "text-gray-500 hover:text-gray-900"
+                        ? "text-(--secondary-text) font-semibold border-b-2 border-(--secondary-text)"
+                        : "text-(--muted-foreground) hover:text-(--foreground)"
                     }
                     `
                 }

@@ -25,7 +25,7 @@ export default function Footer() {
                     target="_blank"
                     href={social_media.href}
                     rel="noreferrer noopener"
-                    className="flex flow-row gap-2 text-muted-foreground"
+                    className="flex flow-row gap-2 text-(--foreground) hover:text-(--secondary-text)"
                 >
                     {social_media.name}
                     <ArrowUpRight />
@@ -35,7 +35,7 @@ export default function Footer() {
     }
 
     return (
-        <footer className="w-full border-t border-border px-16 py-4 text-sm text-muted-foreground">
+        <footer className="w-full border-t border-border px-16 py-4 text-sm text-(--foreground)">
             <div className="max-w-5xl mx-auto flex flex-col sm:flex-row gap-6 items-center justify-between">
                 <div>
                     {renderSocialMediaLinks()}
