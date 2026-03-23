@@ -21,8 +21,8 @@ export default function NavBarListItem({
                             className={
                                 `
                                 ${active
-                                    ? "text-blue-600 font-semibold border-b-2 border-blue-600"
-                                    : "text-gray-500 hover:text-gray-900"
+                                    ? "text-(--secondary-text) font-semibold border-(--secondary-text)"
+                                    : "text-(--muted-foreground) hover:text-(--foreground)"
                                 }
                                 `
                             }

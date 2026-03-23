@@ -73,7 +73,7 @@ export default function NavBar() {
                                     </NavigationMenuTrigger>
 
                                     <NavigationMenuContent>
-                                        <ul className="flex flex-col justify-center items-center">
+                                        <ul className="flex flex-col justify-center items-center p-1">
                                             {renderCompressedEndpoint()}
                                             <div className="flex flex-col gap-1 text-sm">
                                                 <div className="leading-none font-medium">
