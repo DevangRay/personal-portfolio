@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ProjectData } from "@/types/project-types";
+import Pill from "@/app/components/Pill";
 
 const BLOB_COLOR_PAIRS = [
     // 1) red to blue
@@ -99,12 +100,7 @@ export default function BentoCard({ project, index, isFeature }: { project: Proj
 
                     <div className="flex flex-wrap gap-1.5">
                         {project.tags.map((tag) => (
-                            <span
-                                key={tag}
-                                className="text-xs px-2 py-0.5 rounded-full bg-secondary text-secondary-foreground border border-border"
-                            >
-                                {tag}
-                            </span>
+                            <Pill skill={tag} />
                         ))}
                     </div>
 
