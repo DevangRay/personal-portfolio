@@ -33,7 +33,7 @@ export default function ResumeHighlights() {
             <div className="px-4 shrink-0">
                 <div className="w-7/8 border-t border-border mb-3 mx-auto" />
                 <p className="text-xs text-muted-foreground mb-2">Top Skills</p>
-                <div className="flex flex-wrap gap-1.5">
+                <div className="flex flex-wrap gap-1.5 pb-4">
                     {data.skills.map((skill) => (
                         <Pill key={skill} skill={skill} className="bg-zinc-100 dark:bg-zinc-700"/>
                     ))}
