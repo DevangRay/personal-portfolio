@@ -70,88 +70,96 @@ export default function BentoCard({ project, index, isFeature }: { project: Proj
 
     return (
         <div className="group relative flex flex-col h-full overflow-hidden rounded-xl cursor-pointer transition-transform duration-200 ease-out md:hover:-translate-y-0.5 md:hover:translate-x-0.5 active:-translate-y-0.5 active:translate-x-0.5">
-            {/* Gradient blobs */}
-            <div className={`absolute inset-0 ${blobs.a} opacity-50 pointer-events-none`} />
-            <div className={`absolute inset-0 ${blobs.b} opacity-50 pointer-events-none`} />
+            <Link
+                href={project.liveUrl ? project.liveUrl : project.githubUrl}
+                target={"_blank"}
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+            >
 
-            {/* Glass layer */}
-            <div className="absolute inset-0 border border-black/2 bg-black/5 dark:border-white/20 dark:bg-white/5 backdrop-blur-md rounded-xl pointer-events-none" />
+                {/* Gradient blobs */}
+                <div className={`absolute inset-0 ${blobs.a} opacity-50 pointer-events-none`} />
+                <div className={`absolute inset-0 ${blobs.b} opacity-50 pointer-events-none`} />
 
-            {/* Shimmer overlay */}
-            <div
-                className="absolute group-hover:animate-[shimmer-diagonal_0.6s_ease-in-out] pointer-events-none z-10"
-                style={{
-                    background: "linear-gradient(45deg, transparent 0%, transparent 40%, rgba(255,255,255,0.25) 50%, transparent 60%, transparent 100%)",
-                    transform: "translate(-50%, 50%)",
-                    width: "200%",
-                    height: "200%",
-                    top: "-70%",
-                    left: "-70%",
-                }}
-            />
+                {/* Glass layer */}
+                <div className="absolute inset-0 border border-black/2 bg-black/5 dark:border-white/20 dark:bg-white/5 backdrop-blur-md rounded-xl pointer-events-none" />
 
-            {/* Card content */}
-            <div className="relative z-10 flex flex-col h-full">
-                <div className="flex flex-col gap-3 p-4 md:p-6">
-                    <div>
-                        <h3 className="text-lg md:text-xl font-bold">{project.title}</h3>
-                        <p className="text-sm text-muted-foreground mt-1">{project.tagline}</p>
-                    </div>
+                {/* Shimmer overlay */}
+                <div
+                    className="absolute group-hover:animate-[shimmer-diagonal_0.6s_ease-in-out] pointer-events-none z-10"
+                    style={{
+                        background: "linear-gradient(45deg, transparent 0%, transparent 40%, rgba(255,255,255,0.25) 50%, transparent 60%, transparent 100%)",
+                        transform: "translate(-50%, 50%)",
+                        width: "200%",
+                        height: "200%",
+                        top: "-70%",
+                        left: "-70%",
+                    }}
+                />
 
-                    <div className="flex flex-wrap gap-1.5">
-                        {project.tags.map((tag) => (
-                            <Pill skill={tag} />
-                        ))}
-                    </div>
+                {/* Card content */}
+                <div className="relative z-10 flex flex-col h-full">
+                    <div className="flex flex-col gap-3 p-4 md:p-6">
+                        <div>
+                            <h3 className="text-lg md:text-xl font-bold">{project.title}</h3>
+                            <p className="text-sm text-muted-foreground mt-1">{project.tagline}</p>
+                        </div>
 
-                    <div className="flex flex-row sm:flex-row justify-between sm:justify-start items-center sm:items-center gap-3 sm:gap-4">
-                        {project.liveUrl && (
-                            <Link
-                                href={project.liveUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                onClick={(e) => e.stopPropagation()}
-                                className="text-sm font-medium px-4 py-1.5 rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition-opacity"
-                            >
-                                View live site
-                            </Link>
-                        )}
-                        {project.githubUrl && (
-                            <Link
-                                href={project.githubUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                onClick={(e) => e.stopPropagation()}
-                                className="text-sm text-muted-foreground border-b border-border hover:text-foreground transition-colors pb-px"
-                            >
-                                GitHub →
-                            </Link>
-                        )}
-                    </div>
-                </div>
+                        <div className="flex flex-wrap gap-1.5">
+                            {project.tags.map((tag) => (
+                                <Pill key={tag} skill={tag} />
+                            ))}
+                        </div>
 
-                {/* Screenshot */}
-                {
-                    isFeature && (
-                        <div className="relative mx-4 mb-4 rounded-lg overflow-hidden border border-border border-red">
-                            {!imgLoaded && (
-                                <div className="absolute inset-0 bg-muted animate-pulse" />
+                        <div className="flex flex-row sm:flex-row justify-between sm:justify-start items-center sm:items-center gap-3 sm:gap-4">
+                            {project.liveUrl && (
+                                <Link
+                                    href={project.liveUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={(e) => e.stopPropagation()}
+                                    className="text-sm font-medium px-4 py-1.5 rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition-opacity"
+                                >
+                                    View live site
+                                </Link>
                             )}
-                            {project.screenshot && (
-                                <Image
-                                    src={project.screenshot}
-                                    alt={`${project.title} screenshot`}
-                                    width={0}
-                                    height={0}
-                                    sizes="(max-width: 768px) 100vw, 66vw"
-                                    className={`w-full h-auto transition-opacity duration-300 ${imgLoaded ? "opacity-100" : "opacity-0"}`}
-                                    onLoad={() => setImgLoaded(true)}
-                                />
+                            {project.githubUrl && (
+                                <Link
+                                    href={project.githubUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={(e) => e.stopPropagation()}
+                                    className="text-sm text-muted-foreground border-b border-border hover:text-foreground transition-colors pb-px"
+                                >
+                                    GitHub →
+                                </Link>
                             )}
                         </div>
-                    )
-                }
-            </div>
+                    </div>
+
+                    {/* Screenshot */}
+                    {
+                        isFeature && (
+                            <div className="relative mx-4 mb-4 rounded-lg overflow-hidden border border-border border-red">
+                                {!imgLoaded && (
+                                    <div className="absolute inset-0 bg-muted animate-pulse" />
+                                )}
+                                {project.screenshot && (
+                                    <Image
+                                        src={project.screenshot}
+                                        alt={`${project.title} screenshot`}
+                                        width={0}
+                                        height={0}
+                                        sizes="(max-width: 768px) 100vw, 66vw"
+                                        className={`w-full h-auto transition-opacity duration-300 ${imgLoaded ? "opacity-100" : "opacity-0"}`}
+                                        onLoad={() => setImgLoaded(true)}
+                                    />
+                                )}
+                            </div>
+                        )
+                    }
+                </div>
+            </Link>
         </div>
     );
 }
