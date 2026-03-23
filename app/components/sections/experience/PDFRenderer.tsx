@@ -9,6 +9,7 @@ import PaperSkeleton from "@/app/components/sections/experience/PaperSkeleton";
 import resumeData from "@/public/resources/resume_highlights.json";
 import { ResumeData } from "@/types/resume-types";
 import { parseDate } from "@/lib/utils";
+import { ArrowLeft, ArrowRight, Download } from "lucide-react";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
     "pdfjs-dist/build/pdf.worker.min.mjs",
@@ -32,24 +33,30 @@ export default function PDFRenderer() {
     return (
         <div className="flex flex-col">
             {/* Header */}
-            <div className="flex items-center justify-between px-4 py-2.5 border border-b-0 border-border">
-                <span className="text-xs text-muted-foreground">
-                    Last updated {parseDate(data.lastUpdated)}
+            <div className="flex items-center justify-between gap-4 px-4 py-2.5 border border-border bg-neutral-50 dark:bg-stone-900">
+                <span className="text-muted-foreground">
+                    Resume.pdf
                 </span>
+                <div className="flex flex-row items-center gap-4">
+                    <span className="text-xs text-muted-foreground">
+                        Last updated {parseDate(data.lastUpdated)}
+                    </span>
 
-                <Button>
-                    <a
-                        href="/resources/Resume.pdf"
-                        download
-                        className="text-xs text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                        Download
-                    </a>
-                </Button>
+                    <Button variant="outline">
+                        <a
+                            href="/resources/Resume.pdf"
+                            download
+                            className="hover:text-foreground transition-colors flex flex-row gap-2 items-center"
+                        >
+                            Download
+                            <Download />
+                        </a>
+                    </Button>
+                </div>
             </div>
 
             {/* Tray behind the paper */}
-            <div className="bg-neutral-200 dark:bg-neutral-800 p-6">
+            <div className="bg-neutral-200 dark:bg-neutral-800 p-6 border border-b-0 border-t-0 border-border">
                 {isLoading && <PaperSkeleton />}
                 <Document
                     file="/resources/Resume.pdf"
@@ -67,13 +74,13 @@ export default function PDFRenderer() {
             </div>
 
             {/* Controls */}
-            <div className="flex items-center justify-between px-4 py-2.5 border border-t-0 border-border">
+            <div className="flex items-center justify-between px-4 py-2.5 border border-border bg-neutral-50 dark:bg-stone-900">
                 <button
                     onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
                     disabled={currentPage <= 1}
                     className="text-sm px-3 py-1 rounded-md border border-border disabled:opacity-30 hover:bg-muted transition-colors"
                 >
-                    ←
+                    <ArrowLeft />
                 </button>
                 <span className="text-sm text-muted-foreground">
                     {numPages > 0 ? `${currentPage} / ${numPages}` : "—"}
@@ -83,7 +90,7 @@ export default function PDFRenderer() {
                     disabled={currentPage >= numPages}
                     className="text-sm px-3 py-1 rounded-md border border-border disabled:opacity-30 hover:bg-muted transition-colors"
                 >
-                    →
+                    <ArrowRight />
                 </button>
             </div>
         </div>
