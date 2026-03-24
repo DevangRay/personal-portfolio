@@ -17,6 +17,9 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 ).toString();
 
 const data = resumeData as ResumeData;
+const PDF_WIDTH = 460;
+const MIN_PDF_HEIGHT = 595;
+const TRAY_PADDING = 48;
 
 export default function PDFRenderer() {
     const [numPages, setNumPages] = useState<number>(0);
@@ -55,9 +58,18 @@ export default function PDFRenderer() {
                 </div>
             </div>
 
-            {/* Tray behind the paper */}
-            <div className="bg-neutral-200 dark:bg-neutral-800 p-6 border border-b-0 border-t-0 border-border">
-                {isLoading && <PaperSkeleton />}
+            {/* Tray behind the paper — fixed size so it never collapses */}
+            <div
+                className="bg-neutral-200 dark:bg-neutral-800 p-6 border border-b-0 border-t-0 border-border relative"
+                style={{ width: PDF_WIDTH + TRAY_PADDING, minHeight: MIN_PDF_HEIGHT + TRAY_PADDING }}
+            >
+                {/* Skeleton shown only on first load */}
+                {isLoading && (
+                    <div className="absolute inset-0 flex items-center justify-center p-6">
+                        <PaperSkeleton />
+                    </div>
+                )}
+
                 <Document
                     file="/resources/Resume.pdf"
                     onLoadSuccess={onDocumentLoadSuccess}
@@ -67,7 +79,7 @@ export default function PDFRenderer() {
                         pageNumber={currentPage}
                         renderTextLayer={true}
                         renderAnnotationLayer={true}
-                        width={460}
+                        width={PDF_WIDTH}
                         className={isLoading ? "hidden" : "shadow-[0_8px_30px_rgba(0,0,0,0.2),0_2px_8px_rgba(0,0,0,0.12)]"}
                     />
                 </Document>
@@ -84,7 +96,7 @@ export default function PDFRenderer() {
                     <ArrowLeft />
                 </button>
                 <span className="text-sm text-muted-foreground">
-                    {numPages > 0 ? `${currentPage} / ${numPages}` : "—"}
+                    {numPages > 0 ? `${currentPage} / ${numPages}` : ""}
                 </span>
                 <button
                     onClick={() => setCurrentPage((p) => Math.min(numPages, p + 1))}
