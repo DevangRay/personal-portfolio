@@ -18,7 +18,7 @@ export default function BentoBox() {
             {others.map((project, index) => (
                 <div
                     key={index}
-                    className={`col-span-1 md:col-span-${project.span}`}
+                    className={`col-span-1 md:col-span-${project.span} h-full`}
                 >
                     <BentoCard project={project} index={index} isFeature={false}/>
                 </div>

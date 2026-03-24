@@ -70,12 +70,13 @@ export default function BentoCard({ project, index, isFeature }: { project: Proj
 
     return (
         <div className="group relative flex flex-col h-full overflow-hidden rounded-xl cursor-pointer transition-transform duration-200 ease-out md:hover:-translate-y-0.5 md:hover:translate-x-0.5 active:-translate-y-0.5 active:translate-x-0.5">
-            <Link
+            <a
                 href={project.liveUrl ? project.liveUrl : project.githubUrl}
                 target={"_blank"}
                 rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-            >
+                aria-label={project.title}
+                className="absolute inset-0 z-0"
+            />
 
                 {/* Gradient blobs */}
                 <div className={`absolute inset-0 ${blobs.a} opacity-50 pointer-events-none`} />
@@ -159,7 +160,7 @@ export default function BentoCard({ project, index, isFeature }: { project: Proj
                         )
                     }
                 </div>
-            </Link>
-        </div>
+            </div>
+        </div >
     );
 }
