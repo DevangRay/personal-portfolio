@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 
 type SocialMediaLink = {
@@ -21,7 +22,7 @@ export default function Footer() {
     function renderSocialMediaLinks() {
         return links.map((social_media) => (
             <Button key={social_media.name} variant="link">
-                <a
+                <Link
                     target="_blank"
                     href={social_media.href}
                     rel="noreferrer noopener"
@@ -29,7 +30,7 @@ export default function Footer() {
                 >
                     {social_media.name}
                     <ArrowUpRight />
-                </a>
+                </Link>
             </Button>
         ))
     }
