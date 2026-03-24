@@ -76,7 +76,7 @@ export default function BentoCard({ project, index, isFeature }: { project: Proj
                 href={project.liveUrl ? project.liveUrl : project.githubUrl}
                 target={"_blank"}
                 rel="noopener noreferrer"
-                aria-label={project.title}
+                aria-label={`${project.title} URL`}
                 className="absolute inset-0 z-0"
             />
 
@@ -138,7 +138,7 @@ export default function BentoCard({ project, index, isFeature }: { project: Proj
 
                         <div className="flex flex-row sm:flex-row justify-between sm:justify-start items-center sm:items-center gap-3 sm:gap-4 pointer-events-auto">
                             {project.liveUrl && (
-                                <Button asChild variant="outline">
+                                <Button asChild variant="outline" aria-label="Project URL">
                                     <Link
                                         href={project.liveUrl}
                                         target="_blank"
@@ -151,7 +151,7 @@ export default function BentoCard({ project, index, isFeature }: { project: Proj
                                 </Button>
                             )}
                             {project.githubUrl && (
-                                <Button asChild variant="link">
+                                <Button asChild variant="link" aria-label="GitHub URL">
                                     <Link
                                         href={project.githubUrl}
                                         target="_blank"

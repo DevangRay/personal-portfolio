@@ -42,7 +42,7 @@ export default function PDFRenderer() {
                         Last updated {parseDate(data.lastUpdated)}
                     </span>
 
-                    <Button variant="outline">
+                    <Button variant="outline" aria-label="Download Resume">
                         <a
                             href="/resources/Resume.pdf"
                             download
@@ -79,6 +79,7 @@ export default function PDFRenderer() {
                     onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
                     disabled={currentPage <= 1}
                     className="text-sm px-3 py-1 rounded-md border border-border disabled:opacity-30 hover:bg-muted transition-colors"
+                    aria-label="PDF Left Button"
                 >
                     <ArrowLeft />
                 </button>
@@ -89,6 +90,7 @@ export default function PDFRenderer() {
                     onClick={() => setCurrentPage((p) => Math.min(numPages, p + 1))}
                     disabled={currentPage >= numPages}
                     className="text-sm px-3 py-1 rounded-md border border-border disabled:opacity-30 hover:bg-muted transition-colors"
+                    aria-label="PDF Right Button"
                 >
                     <ArrowRight />
                 </button>

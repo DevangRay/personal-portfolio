@@ -21,7 +21,7 @@ export default function Footer() {
 
     function renderSocialMediaLinks() {
         return links.map((social_media) => (
-            <Button key={social_media.name} variant="link">
+            <Button key={social_media.name} variant="link" aria-label={`Link to ${social_media.name}`}>
                 <Link
                     target="_blank"
                     href={social_media.href}

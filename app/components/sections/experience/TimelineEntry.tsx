@@ -27,6 +27,7 @@ export default function TimelineEntry({ entry, color }: { entry: ExperienceEntry
                 <button
                     onClick={() => setExpanded((prev) => !prev)}
                     className="w-full text-left group cursor-pointer hover:bg-muted p-2 pt-0"
+                    aria-label="Job Experience"
                 >
                     <div className="flex items-start justify-between gap-2">
                         <div>

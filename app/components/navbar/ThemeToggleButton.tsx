@@ -23,7 +23,7 @@ export default function ThemeToggleButton({ className }: { className?: string })
     if (!mounted) {
         // Avoid mismatched UI before theme is resolved; disable toggling until mounted.
         return (
-            <Button disabled variant="outline" size="icon" className={`cursor-pointer ${className}`}>
+            <Button disabled variant="outline" size="icon" className={`cursor-pointer ${className}`} aria-label="Theme Change Button">
                 <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
                 <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
                 <span className="sr-only">Wait for theme to load</span>
@@ -32,7 +32,7 @@ export default function ThemeToggleButton({ className }: { className?: string })
     }
 
     return (
-        <Button variant="outline" size="icon" className={`cursor-pointer ${className}`} onClick={changeTheme}>
+        <Button variant="outline" size="icon" className={`cursor-pointer ${className}`} onClick={changeTheme} aria-label="Theme Change Button">
             <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
             <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
             <span className="sr-only">Toggle theme</span>
