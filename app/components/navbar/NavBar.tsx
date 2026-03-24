@@ -55,7 +55,7 @@ export default function NavBar() {
                 {/* Gradient that goes from opaque at top to transparent at bottom */}
                 <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-transparent pointer-events-none" />
 
-                <div className="relative w-full mx-auto flex flex-row justify-between items-center py-10 px-20 sm:px-40">
+                <div className="relative w-full mx-auto flex flex-row justify-between items-center py-10 px-10 sm:px-40">
                     <div>
                         <ProfilePhoto />
                     </div>
