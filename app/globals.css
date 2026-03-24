@@ -52,7 +52,7 @@
 :root {
   --background: #ffffff;
   --foreground: #0a0a0a;
-  --secondary-text: #53917E;
+  --secondary-text: #297d64;
   --navbar-hover: #6C91C2;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -88,7 +88,7 @@
 
 .dark {
   --background: #262927;
-  --foreground: oklch(0.985 0 0);
+  --foreground: #fafafa;
   --secondary-text: #57CB84;
   --navbar-hover: #74B3CE;
   --card: oklch(0.205 0 0);
