@@ -65,7 +65,7 @@ export default function NavBar() {
                         <ThemeToggleButton />
                     </div>
                     <div className="flex md:hidden min-h-[100%] flex flex-row gap-4 items-center">
-                        <NavigationMenu>
+                        <NavigationMenu className="[&>div]:left-auto [&>div]:right-0">
                             <NavigationMenuList>
                                 <NavigationMenuItem>
                                     <NavigationMenuTrigger>
@@ -76,7 +76,7 @@ export default function NavBar() {
                                         <ul className="flex flex-col justify-center items-center p-1">
                                             {renderCompressedEndpoint()}
                                             <div className="flex flex-col gap-1 text-sm">
-                                                <div className="leading-none font-medium">
+                                                <div className="leading-none">
                                                     <ThemeToggleButton />
                                                 </div>
                                             </div>
