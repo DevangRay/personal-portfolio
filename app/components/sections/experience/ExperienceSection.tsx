@@ -1,9 +1,11 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import PaperSkeleton from "@/app/components/sections/experience/PaperSkeleton";
 import ResumeHighlights from "@/app/components/sections/experience/ResumeHighlights";
+import { Download } from "lucide-react";
 
 const PDFRenderer = dynamic(
     () => import("@/app/components/sections/experience/PDFRenderer"),
@@ -44,6 +46,18 @@ export default function ExperienceSection() {
                 <div ref={pdfRef} className="hidden md:flex">
                     <PDFRenderer />
                 </div>
+
+                {/* Phone only Download Resume Button */}
+                <Button variant="outline" aria-label="Download Resume" className="w-full flex md:hidden">
+                    <a
+                        href="/resources/Resume.pdf"
+                        download
+                        className="hover:text-foreground transition-colors flex flex-row gap-2 items-center"
+                    >
+                        Download Resume
+                        <Download />
+                    </a>
+                </Button>
 
                 {/* Right: Highlights */}
                 <div
