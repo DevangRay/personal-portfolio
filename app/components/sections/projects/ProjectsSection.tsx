@@ -4,7 +4,7 @@ export default function ProjectsSection() {
     return (
         <div className="flex flex-col gap-4">
             <h2 className="font-mono text-2xl sm:text-4xl font-bold">
-                Featured Projects
+                Personal Projects
             </h2>
             
             <BentoBox />
