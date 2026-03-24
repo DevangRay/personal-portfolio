@@ -6,7 +6,7 @@ import NavBar from "@/app/components/navbar/NavBar";
 import Footer from "@/app/components/Footer";
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
+  variable: "--font-sans",
   subsets: ["latin"],
 });
 
@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Devang Ray - Portfolio",
-  description: "Personal portfolio of Devang Ray, a software engineer specializing in fullstack development and design.",
+  description: "Personal portfolio of Devang Ray, a software engineer specializing in fullstack development."
 };
 
 export default function RootLayout({

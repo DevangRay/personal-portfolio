@@ -5,7 +5,7 @@ export default function AboutMeSection() {
         <div className="flex flex-col sm:flex-row gap-6">
             {/* Texts */}
             <div className="flex flex-col gap-4">
-                <h2 className="text-2xl sm:text-4xl font-bold">
+                <h2 className="font-mono text-2xl sm:text-4xl font-bold">
                     About Me
                 </h2>
 

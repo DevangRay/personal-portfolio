@@ -51,7 +51,7 @@ export default function NavBar() {
 
     return (
         <>
-            <div className="sticky top-0 z-50 w-full">
+            <div className="font-mono sticky top-0 z-50 w-full">
                 {/* Gradient that goes from opaque at top to transparent at bottom */}
                 <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-transparent pointer-events-none" />
 

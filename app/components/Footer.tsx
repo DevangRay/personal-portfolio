@@ -36,7 +36,7 @@ export default function Footer() {
     }
 
     return (
-        <footer className="w-full border-t border-border px-16 py-4 text-sm text-(--foreground)">
+        <footer className="w-full border-t border-border px-16 py-4 text-sm text-(--foreground) font-mono">
             <div className="max-w-5xl mx-auto flex flex-col sm:flex-row gap-6 items-center justify-between">
                 <div>
                     {renderSocialMediaLinks()}
