@@ -106,6 +106,9 @@ export default function BentoCard({ project, index, isFeature }: { project: Proj
                     <div>
                         <h3 className="text-lg md:text-xl font-bold">{project.title}</h3>
                         <p className="text-sm text-muted-foreground mt-1">{project.tagline}</p>
+                        {project.description !== "" && (
+                            <p className="text-sm text-foreground mt-2">{project.description}</p>
+                        )}
                     </div>
                     <div className="flex flex-wrap gap-1.5">
                         {project.tags.map((tag) => (

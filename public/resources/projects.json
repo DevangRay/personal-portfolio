@@ -3,7 +3,7 @@
         "id": "fantasy-football-sentimizer",
         "title": "Fantasy Sentimizer",
         "tagline": "Extracts NFL Player insights from Fantasy Football Podcasts",
-        "description": "...",
+        "description": "",
         "tags": [
             "NLP",
             "Next.js",
@@ -19,7 +19,7 @@
         "id": "chatbot",
         "title": "Acronym Chatbot",
         "tagline": "Hackathon winning chat bot helping new employees navigate corporate vernacular.",
-        "description": "...",
+        "description": "",
         "tags": [
             "Flask",
             "Bootstrap",
@@ -35,7 +35,7 @@
         "id": "hoos-buying-site",
         "title": "HoosBuying",
         "tagline": "A full-stack marketplace web app I made with a friend with a custom authentication process.",
-        "description": "...",
+        "description": "",
         "tags": [
             "SQLite",
             "GCP",
@@ -52,7 +52,7 @@
         "id": "my-portfolio",
         "title": "Portfolio site",
         "tagline": "The site you're looking at right now!",
-        "description": "Built with Next.js and Tailwind",
+        "description": "",
         "tags": [
             "Next.js",
             "Tailwind"
