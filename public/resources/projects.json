@@ -61,7 +61,7 @@
         "liveUrl": "https://www.devangray.dev/",
         "githubUrl": "https://github.com/DevangRay/personal-portfolio",
         "screenshot": null,
-        "span": 1
+        "span": 2
     },
     {
         "id": "chit-chief",
@@ -74,10 +74,10 @@
             "BullMQ",
             "Swagger"
         ],
-        "featured": false,
+        "featured": true,
         "liveUrl": "https://chitchief.up.railway.app/docs",
         "githubUrl": "https://github.com/DevangRay/ChitChief",
         "screenshot": "/images/projects/chit-chief-schema.png",
-        "span": 5
+        "span": 4
     }
 ]
