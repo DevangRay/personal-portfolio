@@ -3,7 +3,6 @@
         "id": "fantasy-football-sentimizer",
         "title": "Fantasy Sentimizer",
         "tagline": "Extracts NFL Player insights from Fantasy Football Podcasts",
-        "description": "",
         "tags": [
             "NLP",
             "Next.js",
@@ -19,7 +18,6 @@
         "id": "chatbot",
         "title": "Acronym Chatbot",
         "tagline": "Hackathon winning chat bot helping new employees navigate corporate vernacular.",
-        "description": "",
         "tags": [
             "Flask",
             "Bootstrap",
@@ -35,7 +33,6 @@
         "id": "hoos-buying-site",
         "title": "HoosBuying",
         "tagline": "A full-stack marketplace web app I made with a friend with a custom authentication process.",
-        "description": "",
         "tags": [
             "SQLite",
             "GCP",
@@ -52,7 +49,6 @@
         "id": "my-portfolio",
         "title": "Portfolio site",
         "tagline": "The site you're looking at right now!",
-        "description": "",
         "tags": [
             "Next.js",
             "Tailwind"
@@ -66,8 +62,7 @@
     {
         "id": "chit-chief",
         "title": "ChitChief",
-        "tagline": "A ticket-sale API capable of handling enterprise-level traffic.",
-        "description": "This API was developed to explore how to create systems capable of working robustly with high-concurrency traffic using atomic transactions and idempotent purchase operations, backed up with a comprehensive test suite to prove the solution works.",
+        "tagline": "This ticket-sale API developed developed to explore how to create systems capable of handling enterprise-level, high-concurrency traffic using atomic transactions and idempotent purchase operations, backed up with a comprehensive test suite to prove the solution works.",
         "tags": [
             "PostgreSQL",
             "Redis",
