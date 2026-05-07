@@ -62,7 +62,7 @@
     {
         "id": "chit-chief",
         "title": "ChitChief",
-        "tagline": "This ticket-sale API developed developed to explore how to create systems capable of handling enterprise-level, high-concurrency traffic using atomic transactions and idempotent purchase operations, backed up with a comprehensive test suite to prove the solution works.",
+        "tagline": "This ticket-sale API was developed to explore how I can create systems capable of handling enterprise-level, high-concurrency traffic using atomic transactions and idempotent purchase operations, backed up with a comprehensive test suite to prove the solution works.",
         "tags": [
             "PostgreSQL",
             "Redis",
