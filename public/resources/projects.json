@@ -74,7 +74,7 @@
             "BullMQ",
             "Swagger"
         ],
-        "featured": true,
+        "featured": false,
         "liveUrl": "https://chitchief.up.railway.app/docs",
         "githubUrl": "https://github.com/DevangRay/ChitChief",
         "screenshot": "/images/projects/chit-chief-schema.png",
