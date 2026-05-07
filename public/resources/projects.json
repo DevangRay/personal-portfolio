@@ -16,6 +16,23 @@
         "span": 4
     },
     {
+        "id": "chit-chief",
+        "title": "ChitChief",
+        "tagline": "A ticket-purchasing API capable of handling high traffic with atomic transactions and purchase idempotency.",
+        "description": "...",
+        "tags": [
+            "PostgreSQL",
+            "Redis",
+            "BullMQ",
+            "Swagger"
+        ],
+        "featured": false,
+        "liveUrl": "https://chitchief.up.railway.app/docs",
+        "githubUrl": "https://github.com/DevangRay/ChitChief",
+        "screenshot": null,
+        "span": 4
+    },
+    {
         "id": "chatbot",
         "title": "Acronym Chatbot",
         "tagline": "Hackathon winning chat bot helping new employees navigate corporate vernacular.",
