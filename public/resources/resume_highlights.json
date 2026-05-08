@@ -1,6 +1,6 @@
 {
   "name": "Devang Ray",
-  "tagline": "Software engineer specializing in full-stack development, microservices architecture, and customer-facing applications with experience at Swift and CargoLabs.",
+  "tagline": "Full-stack software engineer with expertise in developing scalable web applications, microservices architecture, and reducing operational inefficiencies through innovative technical solutions.",
   "contact": {
     "email": "devangray624@gmail.com",
     "location": "Centreville, VA",
@@ -19,7 +19,7 @@
         "Designed a component-based architecture that facilitated modular code and reduced maintenance time by 34%.",
         "Developed a secure backend service as a RESTful API to provide business logic and content to the website."
       ],
-      "tags": ["React", "RESTful API", "component architecture", "customer support", "backend development"]
+      "tags": ["React", "REST API", "component architecture", "customer support", "backend development"]
     },
     {
       "role": "Software Engineer",
@@ -31,7 +31,7 @@
         "Developed and deployed over 12 new services within a fully microservices-based architecture, expanding the company's marketplace functionality and increasing growth by 7%.",
         "Upgraded the company's back-end code to securely handle high-risk credentials, eliminating potential vulnerabilities and streamlining the company's key-rotation procedures."
       ],
-      "tags": ["microservices", "customer portal", "security", "marketplace", "backend"]
+      "tags": ["microservices", "customer portal", "security", "marketplace"]
     },
     {
       "role": "Software Engineering Intern",
@@ -42,7 +42,7 @@
         "Transformed a 13-year-old legacy knowledge portal into a modern and responsive web application with improved UX and navigation, reducing customer support requests by 12.3%.",
         "Designed and implemented a keyword search feature for improved document navigation, improving user search times from 10 minutes to 1.5 minutes on average."
       ],
-      "tags": ["legacy modernization", "UX design", "search functionality", "web application", "responsive design"]
+      "tags": ["legacy modernization", "UX design", "search optimization", "web application"]
     },
     {
       "role": "Software Engineering Intern",
@@ -74,7 +74,7 @@
         "Upgraded 10% of backend endpoints used by the company's primary product, strengthening the protection of their customers' confidential educational data.",
         "Contributed to a 12.5% increase in average weekly productivity for the team."
       ],
-      "tags": ["backend endpoints", "data security", "productivity", "educational data"]
+      "tags": ["backend development", "data security", "API endpoints", "productivity"]
     }
   ],
   "education": [
@@ -86,5 +86,5 @@
     }
   ],
   "skills": ["Java", "Python", "JavaScript", "TypeScript", "Dart", "C", "C#", "AWS ECS", "AWS Lambda", "AWS Cognito", "AWS Secrets Manager", "PostgreSQL", "MySQL", "SQLite", "MongoDB", "Firebase", "Django", "Flask", "Next.js", "React", "Docker", "Spring", "Spring Boot"],
-  "lastUpdated": "2026-2-24"
+  "lastUpdated": "2026-5-7"
 }

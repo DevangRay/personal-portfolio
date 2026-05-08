@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "watch": "npx tsc --watch",
     "parse-resume": "tsx lib/parse-resume.ts"
   },
   "dependencies": {
