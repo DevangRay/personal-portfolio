@@ -1,9 +1,9 @@
 {
   "name": "Devang Ray",
-  "tagline": "Full-stack software engineer with expertise in developing scalable web applications, microservices architecture, and reducing operational inefficiencies through innovative technical solutions.",
+  "tagline": "Software engineer with experience building cloud-native applications, CI/CD pipelines, and secure authentication systems across enterprise and startup environments.",
   "contact": {
     "email": "devangray624@gmail.com",
-    "location": "Centreville, VA",
+    "location": "Fairfax, VA",
     "linkedin": "linkedin.com/in/DevangRay",
     "github": "github.com/DevangRay",
     "website": "devangray.dev"
@@ -15,23 +15,19 @@
       "startDate": "Jul 2025",
       "endDate": "Present",
       "bullets": [
-        "Spearheaded the development and deployment of a customer-facing help website, reducing customer support calls by 14%.",
-        "Designed a component-based architecture that facilitated modular code and reduced maintenance time by 34%.",
-        "Developed a secure backend service as a RESTful API to provide business logic and content to the website."
+        "I led development of a cloud-native web application and CI/CD pipeline while overhauling authentication for a 10,000+ user enterprise portal, reducing support tickets, improving deployment reliability, and driving AI-adoption initiatives across a 50-developer tribe."
       ],
-      "tags": ["React", "REST API", "component architecture", "customer support", "backend development"]
+      "tags": ["CI/CD", "AWS", "Docker", "Authentication", "Technical Leadership"]
     },
     {
-      "role": "Software Engineer",
+      "role": "Software Engineer (Contract)",
       "company": "CargoLabs",
       "startDate": "Jan 2025",
       "endDate": "Jun 2025",
       "bullets": [
-        "Led the release of an entirely new customer portal that centralized business-critical functions to enhance client efficiency and operations transparency, benefitting over 1200 active users.",
-        "Developed and deployed over 12 new services within a fully microservices-based architecture, expanding the company's marketplace functionality and increasing growth by 7%.",
-        "Upgraded the company's back-end code to securely handle high-risk credentials, eliminating potential vulnerabilities and streamlining the company's key-rotation procedures."
+        "I led the release of a customer portal serving 1200+ active users, built over a dozen microservices to expand marketplace functionality, and migrated enterprise credentials to AWS Secrets Manager with zero service disruption."
       ],
-      "tags": ["microservices", "customer portal", "security", "marketplace"]
+      "tags": ["Microservices", "AWS Secrets Manager", "Portal Development", "Cloud Security"]
     },
     {
       "role": "Software Engineering Intern",
@@ -39,10 +35,9 @@
       "startDate": "Jun 2024",
       "endDate": "Aug 2024",
       "bullets": [
-        "Transformed a 13-year-old legacy knowledge portal into a modern and responsive web application with improved UX and navigation, reducing customer support requests by 12.3%.",
-        "Designed and implemented a keyword search feature for improved document navigation, improving user search times from 10 minutes to 1.5 minutes on average."
+        "I modernized a legacy knowledge portal into a responsive web application and implemented a keyword search feature, significantly reducing customer support requests and average search times."
       ],
-      "tags": ["legacy modernization", "UX design", "search optimization", "web application"]
+      "tags": ["Web Development", "UX", "Search Optimization", "Frontend", "Legacy Modernization"]
     },
     {
       "role": "Software Engineering Intern",
@@ -50,41 +45,34 @@
       "startDate": "Jun 2023",
       "endDate": "Aug 2023",
       "bullets": [
-        "Provided data analysis and visualization of the performance of the company's most critical product, to proactively identify potential system errors, reducing propagated failures by 2.6%."
+        "I built data analysis and visualization tools to monitor the company's central messaging flow, proactively identifying system errors and reducing propagated failures."
       ],
-      "tags": ["data analysis", "visualization", "system monitoring", "error prevention"]
-    },
-    {
-      "role": "Senior Teaching Assistant",
-      "company": "University of Virginia Computer Science Department",
-      "startDate": "Aug 2022",
-      "endDate": "Dec 2024",
-      "bullets": [
-        "Tutored 30+ undergraduate students, teaching best practices with Git, navigating Linux/UNIX systems, and debugging Assembly, C, and full-stack Java coding projects.",
-        "Graded over 800 assignments and assisted in writing comprehensive exam questions covering Computer Architecture, x86-64 Assembly, both C and Java coding languages, and Software Design Patterns."
-      ],
-      "tags": ["teaching", "Git", "Linux", "Assembly", "Java"]
+      "tags": ["Data Analysis", "Data Visualization", "System Monitoring"]
     },
     {
       "role": "Software Engineering Intern",
-      "company": "EMS LINQ, Inc.",
+      "company": "LINQ",
       "startDate": "Jun 2022",
       "endDate": "Aug 2022",
       "bullets": [
-        "Upgraded 10% of backend endpoints used by the company's primary product, strengthening the protection of their customers' confidential educational data.",
-        "Contributed to a 12.5% increase in average weekly productivity for the team."
+        "I refactored a quarter of backend API endpoints to enforce input validation and parameterized queries, reducing SQL injection exposure across confidential data for 20,000 schools."
       ],
-      "tags": ["backend development", "data security", "API endpoints", "productivity"]
+      "tags": ["API Security", "Backend Development", "SQL Input Validation"]
     }
   ],
   "education": [
     {
-      "degree": "Bachelor of Science in Computer Science",
+      "degree": "Bachelor of Science in Computer Science, Summa Cum Laude (GPA: 3.91)",
       "institution": "University of Virginia School of Engineering & Applied Science",
       "startDate": "Aug 2021",
       "endDate": "Dec 2024"
     }
   ],
-  "skills": ["Java", "Python", "JavaScript", "TypeScript", "Dart", "C", "C#", "AWS ECS", "AWS Lambda", "AWS Cognito", "AWS Secrets Manager", "PostgreSQL", "MySQL", "SQLite", "MongoDB", "Firebase", "Django", "Flask", "Next.js", "React", "Docker", "Spring", "Spring Boot"],
-  "lastUpdated": "2026-5-7"
+  "skills": [
+    "Java", "Python", "JavaScript", "TypeScript", "C", "C#",
+    "React", "Next.js", "Spring Boot", "Django", "Flask", "Angular", "AngularJS", ".NET",
+    "AWS ECS", "AWS Lambda", "AWS Cognito", "AWS Secrets Manager", "AWS S3", "Docker",
+    "PostgreSQL", "MySQL", "SQLite", "MongoDB", "Firebase", "Redis", "BullMQ"
+  ],
+  "lastUpdated": "2025-06-10"
 }

@@ -28,7 +28,7 @@ async function extractDetailsFromPDF(pdf_text: string): Promise<Anthropic.Messag
 
     const llm_prompt = `You are a resume parser. Extract structured JSON data from the resume text below.
 
-Return ONLY a valid JSON object with this exact shape — no markdown, no explanation, no backticks:
+The return text should be ONLY a valid JSON object with this exact shape — no markdown, no explanation, no backticks:
 
 {
   "name": "string",
@@ -46,8 +46,8 @@ Return ONLY a valid JSON object with this exact shape — no markdown, no explan
       "company": "string",
       "startDate": "string (e.g. Jan 2022)",
       "endDate": "string (e.g. Dec 2024) or 'Present'",
-      "bullets": ["string", "string"],
-      "tags": ["string"] (3-5 short skill/topic tags extracted from the bullets)
+      "bullets": ["string"],
+      "tags": ["string", "string"] (3-5 short skill/topic tags extracted from the bullets)
     }
   ],
   "education": [
@@ -64,15 +64,16 @@ Return ONLY a valid JSON object with this exact shape — no markdown, no explan
 
 Rules:
 - experience and education should be in reverse-chronological order (most recent first)
-- tags should be concise keywords (e.g. "React", "team leadership", "API design")
+- Tags should be concise keywords (e.g. "React", "team leadership", "API design"), and should be in capital case. The tags can be taken from the resume text, or inferred from the bullets, but should not be invented. There should be 3-5 tags per experience.
 - If a field is not present in the resume, use null for strings or [] for arrays
+- The bullets property in the experience object should be a holistic summary of the role, not a copy of the resume text. There should be 1 single bullet reviewing responsibilites and achievements in the role. Written in 1st person, past tense, with the tone being concise and professional. The single bullet should be 1-3 sentences in length. 
 - Do not invent information that isn't in the resume
 
 Resume text: [${pdf_text}]`
     const client = new Anthropic();
 
     const claude_message = await client.messages.create({
-        model: "claude-sonnet-4-20250514",
+        model: "claude-sonnet-5",
         max_tokens: 2048,
         messages: [
             {
@@ -201,11 +202,20 @@ function returnTestClaudeOutput(): Anthropic.Message {
 }
 
 function parseClaudeOutput(claude_output: Anthropic.Message): void {
-    const block = claude_output.content[0];
+    console.log(`Parsing Claude output...`)
 
-    if (block.type !== "text") {
-        throw new Error("Unexpected content type");
+    let i = 0;
+    while (i < claude_output.content.length && claude_output.content[i].type !== "text") {
+        i += 1;
     }
+
+    if (claude_output.content[i].type !== "text") {
+        // filters out if response does not include TextBlock
+        throw new Error("No text block found in Claude output");
+    }
+    const block = claude_output.content[i] as Anthropic.TextBlock;
+
+    console.log(`Saving text from block ${i}: ${block.text}`);
 
     fs.writeFileSync(OUTPUT_PATH, block.text);
 }
