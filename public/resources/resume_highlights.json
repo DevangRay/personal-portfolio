@@ -17,7 +17,7 @@
       "bullets": [
         "I led end-to-end development of a cloud-native web application and an authentication overhaul for an enterprise portal supporting 10,000+ users, while building an automated CI/CD pipeline for high-availability containerized services and driving AI-assisted development adoption across a 50-developer tribe."
       ],
-      "tags": ["CI/CD", "Docker", "AWS", "Authentication", "Technical Leadership"]
+      "tags": ["Full-Stack Development", "CI/CD", "Docker", "AWS", "Cloud Native", "IAM Applications", "AI-Assisted Development"]
     },
     {
       "role": "Software Development Engineer (Contract)",
@@ -37,7 +37,7 @@
       "bullets": [
         "I modernized a 13-year-old legacy knowledge portal into a responsive web application and implemented a keyword search feature that reduced average user search times from 10 minutes to 1.5 minutes."
       ],
-      "tags": ["Web Development", "UX", "Search Optimization", "Frontend", "Legacy Modernization"]
+      "tags": ["Web Development", "Requirements Gathering", "UX", "Search Optimization", "Full-Stack Design", "Legacy Modernization"]
     },
     {
       "role": "Software Engineering Intern",
