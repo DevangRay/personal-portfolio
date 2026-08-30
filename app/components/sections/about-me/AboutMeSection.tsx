@@ -11,7 +11,7 @@ export default function AboutMeSection() {
 
                 <div className="flex flex-col gap-4 text-(--muted-foreground)">
                     <p>
-                        Hello! I'm Devang Ray, a full-stack developer passionate about building user-friendly products that solve problems and create genuine value rather than simply shipping solutions.
+                        Hello! I'm Devang Ray, a full-stack developer passionate about building user-friendly products that solve problems and create genuine value rather than shipping superficial solutions.
                     </p>
                     <p>
                         Over my career I've grown to thrive in both fast-paced environments where experimentation is valued, and in more mature and complex environments where developing resilient, highly-available situations are crucial.
