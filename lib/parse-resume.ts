@@ -58,7 +58,7 @@ The return text should be ONLY a valid JSON object with this exact shape — no 
       "endDate": "string or null"
     }
   ],
-  "skills": ["string"],
+  "skills": ["string", "string"],
   "lastUpdated": "string (today's date as YYYY-MM-DD)"
 }
 
