@@ -70,7 +70,7 @@
   ],
   "skills": [
     "Angular", "AngularJS", "Bootstrap", "JavaScript", "TypeScript", "React", "Next.js", "HTML5", "CSS3",
-    "Express.js", "Django", "Flask", "C#", "Java", "Node.js", "Python",
+    "Express.js", "Django", "Flask", "C#", "Java", "Node.js", "Python", "Serverless framework", "XML", "JSON",
     "Oracle Database", "MongoDB", "Firebase", "Redis", "BullMQ", "PostgreSQL", "MySQL", "SQLite",
     "Vitest", "Testcontainers", "Supertest", "Grafana k6", "Mockito", "JUnit",
     "AWS ECS", "AWS Lambda", "AWS Cognito", "AWS Secrets Manager", "AWS S3", "Docker", "Podman", "Jenkins", "Vercel",
