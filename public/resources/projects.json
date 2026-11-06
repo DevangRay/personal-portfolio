@@ -9,7 +9,7 @@
             "Flask"
         ],
         "featured": true,
-        "liveUrl": "https://fantasy-football-sentiment-analyzer.vercel.app/",
+        "liveUrl": "https://ff-sentimizer.vercel.app/",
         "githubUrl": "https://github.com/DevangRay/FantasyFootballSentimentAnalyzer",
         "screenshot": "/images/projects/sentiment-analyzer.png",
         "span": 4
